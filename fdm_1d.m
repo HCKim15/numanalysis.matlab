@@ -1,6 +1,6 @@
 clear
 
-n=input('자연수를 입력하세요 : ');
+n=input('자연수를 입력하세요(input a natural number) : ');
 
 h=1/n;
 A=zeros(n-1,n-1);
@@ -29,8 +29,8 @@ b=b*(h^2);
 u=A\b';
 u=[0;u;0];
 
-figure(1) %???
-t=0:0.01:1; %무슨 뜻?
+figure(1) 
+t=0:0.01:1; 
 plot(t,sin(pi*t))
 xlabel('x')
 ylabel('u(x)')
