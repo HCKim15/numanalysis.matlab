@@ -1,0 +1,29 @@
+n=input('input a natural number : ');
+h=(n+1)^2;
+x=zeros(2,h);
+a=0:1/n:1;
+c=ones(1,(n+1)^2);
+b=zeros(1,(n-1)^2);
+
+k=0;
+
+for i=1:h
+
+    x(1,i)=(mod(i,n+1)-1)/n;
+    
+    if x(1,i)==-1/n
+        x(1,i)=1;
+    end
+    
+    x(2,i)=k;
+    
+    if mod(i,n+1)==0 && i<(n+1)^2
+        
+       k=k+(1/n);
+
+    end
+end
+
+
+
+x=x';
