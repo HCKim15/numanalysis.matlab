@@ -101,3 +101,24 @@ b=b/(n^2);
 x=x';
 
 u=A\b';
+
+
+
+% Plotting the graph.
+
+Num=zeros(h,1);
+
+u=A\b';
+
+Num(I)=u;
+
+figure(1)
+[X,Y]=meshgrid(0:0.05:1, 0:0.05:1);
+mesh(X,Y,sin(pi*X).*sin(pi*Y))
+hold on; grid on
+plot3(x(:,1),x(:,2),Num,'r*', 'MarkerSize',6, 'MarkerFaceColor','r');
+xlabel('x'); ylabel('y'); zlabel('u(x,y)');
+title('Numerical solution to the Poisson Equation')
+zlim([0 1]);
+
+
